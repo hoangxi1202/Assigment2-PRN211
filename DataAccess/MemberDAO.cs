@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessObject.Models;
 
-namespace BusinessObject
+namespace BusinessObject.DataAccess
 {
-    internal class MemberDAO
+    public class MemberDAO
     {
     }
 }

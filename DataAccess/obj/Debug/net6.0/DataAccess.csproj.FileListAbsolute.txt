@@ -1,0 +1,15 @@
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\bin\Debug\net6.0\DataAccess.dll
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\DataAccess.dll
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
