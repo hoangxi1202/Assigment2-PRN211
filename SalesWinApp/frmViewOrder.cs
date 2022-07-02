@@ -47,7 +47,7 @@ namespace SalesWinApp
                     errors.memberIdError = "Member ID must be the number format and greater than 0!";
                 }
 
-                string freight = txtFreight.Text;
+                string freight = txtFreight.Text.Replace(".0000", "");
                 if (!string.IsNullOrEmpty(freight))
                 {
                     if (regex.IsMatch(freight) == false || int.Parse(freight) < 0)
@@ -66,7 +66,7 @@ namespace SalesWinApp
                     freight = "";
                 }
                 string orderDate = dtOrderDate.Text;
-                if (string.IsNullOrEmpty(orderDate))
+                if (string.IsNullOrEmpty(orderDate) || orderDate.Equals(" "))
                 {
                     found = true;
                     errors.orderDateError = "Order Date can not be empty";
