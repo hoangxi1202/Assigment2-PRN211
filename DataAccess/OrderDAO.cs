@@ -45,14 +45,12 @@ namespace BusinessObject.DataAccess
             try
             {
                 FStoreContext DbContext = new FStoreContext();
-                //1. thực hiện thêm trên DbContext
                 DbContext.Orders.Add(order);
-                //2. thực hiện thay đổi dưới database
                 DbContext.SaveChanges();
             }
             catch (Exception)
             {
-                throw new Exception("Add a new order unsuccessfully");
+                throw new Exception("Add a new order unsuccessfully (Order ID already exist or MemberID does not exist)");
             }
         }
 
