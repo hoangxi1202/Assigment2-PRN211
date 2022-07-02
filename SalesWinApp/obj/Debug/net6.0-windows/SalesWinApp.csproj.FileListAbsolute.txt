@@ -54,3 +54,4 @@ D:\Codes\Ass2\Assigment2-PRN211\SalesWinApp\obj\Debug\net6.0-windows\refint\Sale
 D:\Codes\Ass2\Assigment2-PRN211\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.pdb
 D:\Codes\Ass2\Assigment2-PRN211\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.genruntimeconfig.cache
 D:\Codes\Ass2\Assigment2-PRN211\SalesWinApp\obj\Debug\net6.0-windows\ref\SalesWinApp.dll
+D:\Codes\Ass2\Assigment2-PRN211\SalesWinApp\obj\Debug\net6.0-windows\SalesWinApp.frmViewOrder.resources
