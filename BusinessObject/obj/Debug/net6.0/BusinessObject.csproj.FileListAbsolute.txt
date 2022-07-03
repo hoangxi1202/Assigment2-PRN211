@@ -12,3 +12,17 @@ D:\Codes\Ass2\Assigment2-PRN211\BusinessObject\obj\Debug\net6.0\refint\BusinessO
 D:\Codes\Ass2\Assigment2-PRN211\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
 D:\Codes\Ass2\Assigment2-PRN211\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
 D:\Codes\Ass2\Assigment2-PRN211\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\bin\Debug\net6.0\BusinessObject.deps.json
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\bin\Debug\net6.0\BusinessObject.runtimeconfig.json
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\bin\Debug\net6.0\BusinessObject.dll
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\bin\Debug\net6.0\BusinessObject.pdb
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.AssemblyReference.cache
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfoInputs.cache
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfo.cs
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.CoreCompileInputs.cache
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.dll
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\obj\Debug\net6.0\refint\BusinessObject.dll
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
+D:\Team SE .NET\PRN211\Ass02Solution\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll

@@ -13,3 +13,18 @@ D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\DataAccess.dll
 D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
 D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 D:\Codes\Ass2\Assigment2-PRN211\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\bin\Debug\net6.0\DataAccess.deps.json
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\bin\Debug\net6.0\DataAccess.dll
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\bin\Debug\net6.0\DataAccess.pdb
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\bin\Debug\net6.0\BusinessObject.dll
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\bin\Debug\net6.0\BusinessObject.pdb
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.AssemblyReference.cache
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\obj\Debug\net6.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfoInputs.cache
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\obj\Debug\net6.0\DataAccess.AssemblyInfo.cs
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\obj\Debug\net6.0\DataAccess.dll
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\obj\Debug\net6.0\DataAccess.pdb
+D:\Team SE .NET\PRN211\Ass02Solution\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll

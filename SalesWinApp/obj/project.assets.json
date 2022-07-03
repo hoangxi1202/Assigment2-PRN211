@@ -1807,24 +1807,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nhat Linh\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Codes\\Ass2\\Assigment2-PRN211\\SalesWinApp\\SalesWinApp.csproj",
+      "projectUniqueName": "D:\\Team SE .NET\\PRN211\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
       "projectName": "SalesWinApp",
-      "projectPath": "D:\\Codes\\Ass2\\Assigment2-PRN211\\SalesWinApp\\SalesWinApp.csproj",
-      "packagesPath": "C:\\Users\\Nhat Linh\\.nuget\\packages\\",
-      "outputPath": "D:\\Codes\\Ass2\\Assigment2-PRN211\\SalesWinApp\\obj\\",
+      "projectPath": "D:\\Team SE .NET\\PRN211\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\Team SE .NET\\PRN211\\Ass02Solution\\SalesWinApp\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Nhat Linh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1838,11 +1833,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\Codes\\Ass2\\Assigment2-PRN211\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "D:\\Codes\\Ass2\\Assigment2-PRN211\\BusinessObject\\BusinessObject.csproj"
+            "D:\\Team SE .NET\\PRN211\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "D:\\Team SE .NET\\PRN211\\Ass02Solution\\BusinessObject\\BusinessObject.csproj"
             },
-            "D:\\Codes\\Ass2\\Assigment2-PRN211\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "D:\\Codes\\Ass2\\Assigment2-PRN211\\DataAccess\\DataAccess.csproj"
+            "D:\\Team SE .NET\\PRN211\\Ass02Solution\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\Team SE .NET\\PRN211\\Ass02Solution\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -1874,7 +1869,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
