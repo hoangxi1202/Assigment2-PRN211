@@ -44,65 +44,38 @@ namespace SalesWinApp
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
+            btnDelete.Enabled = false;
+            dgvOrderList.CellDoubleClick += DgvOrderList_CellDoubleClick;
             LoadOrderList();
         }
 
-        private void btnNew_Click(object sender, EventArgs e)
+        private void DgvOrderList_CellDoubleClick(object? sender, DataGridViewCellEventArgs e)
         {
-            if (btnNew.Text.Equals("New"))
+            frmViewOrder frmViewOrder = new frmViewOrder
             {
-                txtOrderID.Clear();
-                txtMemberID.Clear();
-                txtFreight.Clear();
-                dtRequiredDate.CustomFormat = " ";
-                dtOrderDate.CustomFormat = " ";
-                dtShippedDate.CustomFormat = " ";
-
-                btnDelete.Enabled = false; 
-                btnUpdate.Enabled = false;  
-                btnNew.Text = "Cancel";
-                btnSave.Enabled = true;
-            }
-            else
+                Text = "Update a car",
+                InsertOrUpdate = true,
+                OrderInfo = GetOrderObject(),
+                OrderRepository = orderRepository
+            };
+            if (frmViewOrder.ShowDialog() == DialogResult.OK)
             {
-                btnDelete.Enabled = true;
-                btnUpdate.Enabled = true;
-                btnNew.Text = "New";
-                btnSave.Enabled = false;
+                LoadOrderList();
+                source.Position = source.Count - 1;
             }
         }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
+    private Order GetOrderObject()
+    {
+        Order? order = null; 
             try
             {
-                OrderError errors = new OrderError();
-                bool found = false;
-                string orderId = txtOrderID.Text;
-                string pattern = @"^[0-9.]*$";
-                Regex regex = new Regex(pattern);
-                if (regex.IsMatch(orderId) == false || orderId.Trim().Equals("") || int.Parse(orderId) < 0)
-                {
-                    found = true;
-                    errors.orderIdError = "Order ID must be the number format and greater than 0!";
-                }
-
-                string memberId = txtMemberID.Text;
-                if (regex.IsMatch(memberId) == false || memberId.Trim().Equals("") || int.Parse(memberId) < 0)
-                {
-                    found = true;
-                    errors.memberIdError = "Member ID must be the number format and greater than 0!";
-                }
-
+                int orderID;
+                dynamic check = int.TryParse(txtOrderID.Text, out orderID);
+                int memberID;
+                check = int.TryParse(txtMemberID.Text, out memberID);
                 string freight = txtFreight.Text;
                 if (!string.IsNullOrEmpty(freight))
                 {
-                    if (regex.IsMatch(freight) == false || int.Parse(freight) < 0)
-                    {
-                        found = true;
-                        errors.freightError = "Freight must be the number format and greater than 0!";
-
-                    }
                 }
                 else if (freight.Equals("0"))
                 {
@@ -112,52 +85,35 @@ namespace SalesWinApp
                 {
                     freight = "";
                 }
-                string orderDate = dtOrderDate.Text;
-                if (string.IsNullOrEmpty(orderDate))
-                {
-                    found = true;
-                    errors.orderDateError = "Order Date can not be empty";
-                }
                 string requiredDate = dtRequiredDate.Text;
                 if (string.IsNullOrEmpty(requiredDate))
                 {
                     requiredDate = " ";
-                } 
+                }
                 string shippedDate = dtShippedDate.Text;
                 if (string.IsNullOrEmpty(shippedDate))
                 {
                     shippedDate = " ";
                 }
-                
-                if (found)
+                decimal freightCheck;
+                bool found = decimal.TryParse(freight, out freightCheck);
+
+                order = new Order
                 {
-                    MessageBox.Show($"{errors.orderIdError} \n " +
-                        $"{errors.memberIdError} \n " +
-                        $"{errors.freightError} \n" +
-                        $"{errors.orderDateError} \n" +
-                        $"{errors.requiredDateError} \n" +
-                        $"{errors.shippedDateError}", "Add a new product - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    Order updateOrder = new Order
-                    {
-                        OrderId = int.Parse(orderId),
-                        MemberId = int.Parse(memberId),
-                        Freight = !freight.Equals("")?decimal.Parse(freight):null,
-                        OrderDate = DateTime.ParseExact(orderDate, "dd/MM/yyyy HH:mm", null),
-                        ShippedDate = (!shippedDate.Equals(" "))?DateTime.ParseExact(shippedDate, "dd/MM/yyyy HH:mm", null): null,
-                        RequiredDate = (!requiredDate.Equals(" "))?DateTime.ParseExact(requiredDate, "dd/MM/yyyy HH:mm", null): null,
-                    };
-                    orderRepository.UpdateOrder(updateOrder);
-                    LoadOrderList();
-                }
+                    OrderId = orderID,
+                    MemberId = memberID,
+                    Freight = freightCheck,
+                    OrderDate = DateTime.ParseExact(dtOrderDate.Text, "dd/MM/yyyy HH:mm", null),
+                    RequiredDate = (!requiredDate.Equals(" ")) ? DateTime.ParseExact(requiredDate, "dd/MM/yyyy HH:mm", null) : null,
+                    ShippedDate = (!shippedDate.Equals(" ")) ? DateTime.ParseExact(shippedDate, "dd/MM/yyyy HH:mm", null) : null
+                };
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Add a new product - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Get order");
             }
-        }
+            return order;
+    }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -178,96 +134,7 @@ namespace SalesWinApp
 
         private void frmOrder_Load(object sender, EventArgs e)
         {
-            btnSave.Enabled = false;
             LoadOrderList();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                OrderError errors = new OrderError();
-                bool found = false;
-                string orderId = txtOrderID.Text;
-                string pattern = @"^[0-9.]*$";
-                Regex regex = new Regex(pattern);
-                if (regex.IsMatch(orderId) == false || orderId.Trim().Equals("") || int.Parse(orderId) < 0)
-                {
-                    found = true;
-                    errors.orderIdError = "Order ID must be the number format and greater than 0!";
-                }
-
-                string memberId = txtMemberID.Text;
-                if (regex.IsMatch(memberId) == false || memberId.Trim().Equals("") || int.Parse(memberId) < 0)
-                {
-                    found = true;
-                    errors.memberIdError = "Member ID must be the number format and greater than 0!";
-                }
-
-                string freight = txtFreight.Text;
-                if (!string.IsNullOrEmpty(freight))
-                {
-                    if (regex.IsMatch(freight) == false || int.Parse(freight) < 0)
-                    {
-                        found = true;
-                        errors.freightError = "Freight must be the number format and greater than 0!";
-
-                    }
-                }
-                else if (freight.Equals("0"))
-                {
-                    freight = "0";
-                }
-                else if (freight == null)
-                {
-                    freight = "";
-                }
-                string orderDate = dtOrderDate.Text;
-                if (string.IsNullOrEmpty(orderDate))
-                {
-                    found = true;
-                    errors.orderDateError = "Order Date can not be empty";
-                }
-                string requiredDate = dtRequiredDate.Text;
-                if (string.IsNullOrEmpty(requiredDate))
-                {
-                    requiredDate = " ";
-                }
-                string shippedDate = dtShippedDate.Text;
-                if (string.IsNullOrEmpty(shippedDate))
-                {
-                    shippedDate = " ";
-                }
-
-                if (found)
-                {
-                    MessageBox.Show($"{errors.orderIdError} \n " +
-                        $"{errors.memberIdError} \n " +
-                        $"{errors.freightError} \n" +
-                        $"{errors.orderDateError} \n" +
-                        $"{errors.requiredDateError} \n" +
-                        $"{errors.shippedDateError}", "Add a new product - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    Order newOrder = new Order
-                    {
-                        OrderId = int.Parse(orderId),
-                        MemberId = int.Parse(memberId),
-                        Freight = !freight.Equals("") ? decimal.Parse(freight) : null,
-                        OrderDate = DateTime.ParseExact(orderDate, "dd/MM/yyyy HH:mm", null),
-                        ShippedDate = !shippedDate.Equals(" ") ? DateTime.ParseExact(shippedDate, "dd/MM/yyyy HH:mm", null) : null,
-                        RequiredDate = !requiredDate.Equals(" ") ? DateTime.ParseExact(requiredDate, "dd/MM/yyyy HH:mm", null) : null,
-                    };
-                    orderRepository.AddNewOrder(newOrder);
-                    LoadOrderList();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Add a new product - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
         }
 
         private void dgvOrderList_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -342,6 +209,21 @@ namespace SalesWinApp
             if ((e.KeyCode == Keys.Back) || (e.KeyCode == Keys.Delete))
             {
                 dtShippedDate.CustomFormat = " ";
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmViewOrder frmViewOrder = new frmViewOrder
+            {
+                Text = "Add a order",
+                InsertOrUpdate = false,
+                OrderRepository = orderRepository
+            };
+            if (frmViewOrder.ShowDialog() == DialogResult.OK)
+            {
+                LoadOrderList();
+                source.Position = source.Count - 1;
             }
         }
     }

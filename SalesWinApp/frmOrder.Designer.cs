@@ -39,14 +39,12 @@
             this.txtFreight = new System.Windows.Forms.MaskedTextBox();
             this.dgvOrderList = new System.Windows.Forms.DataGridView();
             this.btnLoad = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.dtOrderDate = new System.Windows.Forms.DateTimePicker();
             this.dtRequiredDate = new System.Windows.Forms.DateTimePicker();
             this.dtShippedDate = new System.Windows.Forms.DateTimePicker();
+            this.btnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,6 +140,7 @@
             this.dgvOrderList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvOrderList.Size = new System.Drawing.Size(776, 214);
             this.dgvOrderList.TabIndex = 12;
+            this.dgvOrderList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvOrderList_CellDoubleClick);
             this.dgvOrderList.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrderList_RowEnter);
             // 
             // btnLoad
@@ -154,29 +153,9 @@
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(190, 165);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(94, 29);
-            this.btnNew.TabIndex = 14;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(346, 165);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(94, 29);
-            this.btnUpdate.TabIndex = 15;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(503, 165);
+            this.btnDelete.Location = new System.Drawing.Point(662, 165);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 29);
             this.btnDelete.TabIndex = 16;
@@ -193,16 +172,6 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(662, 165);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 29);
-            this.btnSave.TabIndex = 18;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dtOrderDate
             // 
@@ -243,19 +212,27 @@
             this.dtShippedDate.ValueChanged += new System.EventHandler(this.dtShippedDate_ValueChanged);
             this.dtShippedDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtShippedDate_KeyDown);
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(346, 165);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(94, 29);
+            this.btnAdd.TabIndex = 22;
+            this.btnAdd.Text = "New";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // frmOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 455);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dtShippedDate);
             this.Controls.Add(this.dtRequiredDate);
             this.Controls.Add(this.dtOrderDate);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.dgvOrderList);
             this.Controls.Add(this.txtFreight);
@@ -290,13 +267,11 @@
         private MaskedTextBox txtFreight;
         private DataGridView dgvOrderList;
         private Button btnLoad;
-        private Button btnNew;
-        private Button btnUpdate;
         private Button btnDelete;
         private Button btnClose;
-        private Button btnSave;
         private DateTimePicker dtOrderDate;
         private DateTimePicker dtRequiredDate;
         private DateTimePicker dtShippedDate;
+        private Button btnAdd;
     }
 }
